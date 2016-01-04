@@ -1,215 +1,100 @@
-
-#define HSE_VALUE ((uint32_t)8000000) /* STM32 discovery uses a 8Mhz external crystal */
-
-#include "stm32f4xx_conf.h"
 #include "stm32f4xx.h"
-#include "stm32f4xx_gpio.h"
-#include "stm32f4xx_rcc.h"
-#include "stm32f4xx_exti.h"
-#include "usbd_cdc_core.h"
-#include "usbd_usr.h"
-#include "usbd_desc.h"
-#include "usbd_cdc_vcp.h"
-#include "usb_dcd_int.h"
 
-volatile uint32_t ticker, downTickerW, downTickerA, downTickerD, downTickerS;
-
-/*
- * The USB data must be 4 byte aligned if DMA is enabled. This macro handles
- * the alignment, if necessary (it's actually magic, but don't tell anyone).
- */
-__ALIGN_BEGIN USB_OTG_CORE_HANDLE  USB_OTG_dev __ALIGN_END;
+#include "FreeRTOS.h"
+#include "task.h"
 
 
-void init();
-void ColorfulRingOfDeath(void);
+// Task priorities: Higher numbers are higher priority.
+#define mainTIME_TASK_PRIORITY ( tskIDLE_PRIORITY + 4 )
+#define mainTIME2_TASK_PRIORITY ( tskIDLE_PRIORITY + 3 )
+#define mainMEMS_TASK_PRIORITY ( tskIDLE_PRIORITY + 2 )
+#define mainDEBUG_TASK_PRIORITY ( tskIDLE_PRIORITY + 1 )
+#define mainINTEGER_TASK_PRIORITY ( tskIDLE_PRIORITY )
 
-/*
- * Define prototypes for interrupt handlers here. The conditional "extern"
- * ensures the weak declarations from startup_stm32f4xx.c are overridden.
- */
-#ifdef __cplusplus
- extern "C" {
-#endif
+xTaskHandle hTimeTask;
+xTaskHandle hTimeTask2;
+xTaskHandle hMemsTask;
+xTaskHandle hDebugTask;
 
-void SysTick_Handler(void);
-void NMI_Handler(void);
-void HardFault_Handler(void);
-void MemManage_Handler(void);
-void BusFault_Handler(void);
-void UsageFault_Handler(void);
-void SVC_Handler(void);
-void DebugMon_Handler(void);
-void PendSV_Handler(void);
-void OTG_FS_IRQHandler(void);
-void OTG_FS_WKUP_IRQHandler(void);
+portTASK_FUNCTION_PROTO( vTimeTask, pvParameters );
+portTASK_FUNCTION_PROTO( vTimeTask2, pvParameters );
+portTASK_FUNCTION_PROTO( vMemsTask, pvParameters );
+portTASK_FUNCTION_PROTO( vDebugTask, pvParameters );
 
-#ifdef __cplusplus
-}
-#endif
+uint64_t u64Ticks=0; // Counts OS ticks (default = 1000Hz).
+uint64_t u64IdleTicks=0; // Value of u64IdleTicksCnt is copied once per sec.
+uint64_t u64IdleTicksCnt=0; // Counts when the OS has no task to execute.
+uint16_t u16PWM1=0;
 
+// 任務一
+// ----------------------------------------------------------------------------
+void myTask1(){
 
+    portTickType xLastWakeTime = xTaskGetTickCount();
 
-int main(void)
-{
-	/* Set up the system clocks */
-	SystemInit();
-
-	/* Initialize USB, IO, SysTick, and all those other things you do in the morning */
-	init();
-
-
-	while (1)
-	{
-		uint8_t theByte;
-
-		if (VCP_get_char(&theByte))
-		{
-			VCP_put_char(theByte);
-
-			if(theByte == 'w' || theByte == 'W')
-			{
-				GPIOD->BSRRL = GPIO_Pin_13;
-				downTickerW = 10;
-			}
-			else if(theByte == 'a' || theByte == 'A')
-			{
-				GPIOD->BSRRL = GPIO_Pin_12;
-				downTickerA = 10;
-			}
-			else if(theByte == 'd' || theByte == 'D')
-			{
-				GPIOD->BSRRL = GPIO_Pin_14;
-				downTickerD = 10;
-			}
-			else if(theByte == 's' || theByte == 'S')
-			{
-				GPIOD->BSRRL = GPIO_Pin_15;
-				downTickerS = 10;
-			}
-		}
-		if (downTickerW == 0)
-		{
-			GPIOD->BSRRH = GPIO_Pin_13;
-		}
-		if (downTickerA == 0)
-		{
-			GPIOD->BSRRH = GPIO_Pin_12;
-		}
-		if (downTickerD == 0)
-		{
-			GPIOD->BSRRH = GPIO_Pin_14;
-		}
-		if (downTickerS == 0)
-		{
-			GPIOD->BSRRH = GPIO_Pin_15;
-		}
-	}
-
+    while(1){
+        GPIO_ToggleBits(GPIOD,GPIO_Pin_13);
+        vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_RATE_MS ) );
+    }
 }
 
+// 任務二
+// ----------------------------------------------------------------------------
+void myTask2(){
 
-void init()
-{
-	/* STM32F4 discovery LEDs */
-	GPIO_InitTypeDef LED_Config;
+    portTickType xLastWakeTime = xTaskGetTickCount();
 
-	/* Always remember to turn on the peripheral clock...  If not, you may be up till 3am debugging... */
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
-	LED_Config.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13| GPIO_Pin_14| GPIO_Pin_15;
-	LED_Config.GPIO_Mode = GPIO_Mode_OUT;
-	LED_Config.GPIO_OType = GPIO_OType_PP;
-	LED_Config.GPIO_Speed = GPIO_Speed_25MHz;
-	LED_Config.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_Init(GPIOD, &LED_Config);
-
-	/* Setup SysTick or CROD! */
-	if (SysTick_Config(SystemCoreClock / 1000))
-	{
-		ColorfulRingOfDeath();
-	}
-
-
-	/* Setup USB */
-	USBD_Init(&USB_OTG_dev,
-	            USB_OTG_FS_CORE_ID,
-	            &USR_desc,
-	            &USBD_CDC_cb,
-	            &USR_cb);
-
-	return;
+    while(1){
+        GPIO_ToggleBits(GPIOD,GPIO_Pin_15);
+        vTaskDelayUntil( &xLastWakeTime, ( 500 / portTICK_RATE_MS ) );
+    }
 }
 
-/*
- * Call this to indicate a failure.  Blinks the STM32F4 discovery LEDs
- * in sequence.  At 168Mhz, the blinking will be very fast - about 5 Hz.
- * Keep that in mind when debugging, knowing the clock speed might help
- * with debugging.
- */
-void ColorfulRingOfDeath(void)
-{
-	uint16_t ring = 1;
-	while (1)
-	{
-		uint32_t count = 0;
-		while (count++ < 500000);
-
-		GPIOD->BSRRH = (ring << 12);
-		ring = ring << 1;
-		if (ring >= 1<<4)
-		{
-			ring = 1;
-		}
-		GPIOD->BSRRL = (ring << 12);
-	}
+// 初始化 GPIO
+// ----------------------------------------------------------------------------
+void GPIOInit(){
+    GPIO_InitTypeDef g;
+    g.GPIO_Pin = GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15; // 指定 12,13,14,15 腳
+    g.GPIO_Mode = GPIO_Mode_OUT; // 設定針腳為輸出
+    g.GPIO_Speed = GPIO_Speed_100MHz; // 指定 GPIO 頻率為100 MHz
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE); // 啟用 GPIOD
+    GPIO_Init(GPIOD, &g); // 初始化 GPIO D
 }
 
-/*
- * Interrupt Handlers
- */
+int main(void){
+    GPIOInit(); // 初始化 GPIO
 
-void SysTick_Handler(void)
-{
-	ticker++;
-	if (downTickerW > 0)
-	{
-		downTickerW--;
-	}
-	if (downTickerA > 0)
-	{
-		downTickerA--;
-	}
-	if (downTickerD > 0)
-	{
-		downTickerD--;
-	}
-	if (downTickerS > 0)
-	{
-		downTickerS--;
-	}
+    // 創建任務一，執行 myTask1 () 涵式。 
+    xTaskCreate( myTask1, (signed char *) "TIME", configMINIMAL_STACK_SIZE, 
+    NULL, mainTIME_TASK_PRIORITY, &hTimeTask );
+
+     // 創建任務二，執行 myTask2 () 涵式。
+    xTaskCreate( myTask2, (signed char *) "TIME", configMINIMAL_STACK_SIZE, 
+    NULL, mainTIME_TASK_PRIORITY, &hTimeTask );
+
+    vTaskStartScheduler(); // 開始任務調度
+
+    // Will only get here if there was insufficient memory to create
+    // the idle task.
+    while(1);
 }
 
-void NMI_Handler(void)       {}
-void HardFault_Handler(void) { ColorfulRingOfDeath(); }
-void MemManage_Handler(void) { ColorfulRingOfDeath(); }
-void BusFault_Handler(void)  { ColorfulRingOfDeath(); }
-void UsageFault_Handler(void){ ColorfulRingOfDeath(); }
-void SVC_Handler(void)       {}
-void DebugMon_Handler(void)  {}
-void PendSV_Handler(void)    {}
-
-void OTG_FS_IRQHandler(void)
-{
-  USBD_OTG_ISR_Handler (&USB_OTG_dev);
+// This FreeRTOS callback function gets called once per tick (default = 1000Hz).
+// ---------------------------------------------------------------------------- 
+void vApplicationTickHook( void ) {
+    ++u64Ticks;
 }
 
-void OTG_FS_WKUP_IRQHandler(void)
-{
-  if(USB_OTG_dev.cfg.low_power)
-  {
-    *(uint32_t *)(0xE000ED10) &= 0xFFFFFFF9 ;
-    SystemInit();
-    USB_OTG_UngateClock(&USB_OTG_dev);
-  }
-  EXTI_ClearITPendingBit(EXTI_Line18);
+// This FreeRTOS call-back function gets when no other task is ready to execute.
+// On a completely unloaded system this is getting called at over 2.5MHz!
+// ---------------------------------------------------------------------------- 
+void vApplicationIdleHook( void ) {
+    ++u64IdleTicksCnt;
 }
+
+// A required FreeRTOS function.
+// ---------------------------------------------------------------------------- 
+void vApplicationMallocFailedHook( void ) {
+    configASSERT( 0 ); // Latch on any failure / error.
+}
+
