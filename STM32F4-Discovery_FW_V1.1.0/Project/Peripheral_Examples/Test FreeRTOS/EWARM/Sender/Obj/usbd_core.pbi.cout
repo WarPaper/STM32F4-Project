@@ -1,4 +1,4 @@
-"F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\core\usbd_core.c"
+"F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test FreeRTOS\usb_lib\core\usbd_core.c"
 -std=c99
 -ferror-limit=100
 -I
