@@ -1,0 +1,337 @@
+###############################################################################
+#
+# IAR ELF Linker V7.40.7.9843/W32 for ARM                 09/Nov/2015  16:35:38
+# Copyright 2007-2015 IAR Systems AB.
+#
+#    Output file  =  
+#        F:\Google Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Exe\IO_Toggle.out
+#    Map file     =  
+#        F:\Google Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\List\IO_Toggle.map
+#    Command line =  
+#        "F:\Google Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\main.o" "F:\Google
+#        Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\misc.o" "F:\Google
+#        Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\startup_stm32f4xx.o"
+#        "F:\Google Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\stm32f4_discovery.o"
+#        "F:\Google Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\stm32f4xx_gpio.o"
+#        "F:\Google Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\stm32f4xx_it.o"
+#        "F:\Google Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\stm32f4xx_rcc.o"
+#        "F:\Google Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\stm32f4xx_usart.o"
+#        "F:\Google Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\system_stm32f4xx.o"
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfSmall -o
+#        "F:\Google Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Exe\IO_Toggle.out" --map
+#        "F:\Google Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\List\IO_Toggle.map"
+#        --config "F:\Google Drive\THESIS !!!!\Thesis LOG
+#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Sender UART3&1 - OK! 23-06-2558\EWARM\stm32f4xx_flash.icf"
+#        --semihosting --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x080fffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20020000] { rw, block CSTACK, block HEAP };
+
+  Section            Kind        Address   Size  Object
+  -------            ----        -------   ----  ------
+"A1":                                     0x188
+  .intvec            ro code  0x08000000  0x188  startup_stm32f4xx.o [1]
+                            - 0x08000188  0x188
+
+"P1":                                     0x9d8
+  .text              ro code  0x08000188  0x354  main.o [1]
+  .text              ro code  0x080004dc   0xcc  stm32f4xx_rcc.o [1]
+  .text              ro code  0x080005a8   0xb2  stm32f4xx_gpio.o [1]
+  .text              ro code  0x0800065c  0x13e  stm32f4xx_usart.o [1]
+  .text              ro code  0x0800079c   0x68  misc.o [1]
+  .text              ro code  0x08000804   0xe0  system_stm32f4xx.o [1]
+  .text              ro code  0x080008e4   0x2c  copy_init3.o [4]
+  .text              ro code  0x08000910   0x28  data_init.o [4]
+  .iar.init_table    const    0x08000938   0x14  - Linker created -
+  .text              ro code  0x0800094c   0x1a  cmain.o [4]
+  .text              ro code  0x08000966    0x4  low_level_init.o [3]
+  .text              ro code  0x0800096a    0x4  exit.o [3]
+  .text              ro code  0x08000970    0xa  cexit.o [4]
+  .text              ro code  0x0800097c   0x14  exit.o [5]
+  .text              ro code  0x08000990   0x12  stm32f4xx_it.o [1]
+  .text              ro code  0x080009a4   0x10  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009b4    0xc  cstartup_M.o [4]
+  .text              ro code  0x080009c0    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009c4    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009c8    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009cc    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009d0    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009d4    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009d8    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009dc    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009e0    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009e4    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009e8    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009ec    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009f0    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009f4    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009f8    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x080009fc    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a00    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a04    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a08    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a0c    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a10    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a14    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a18    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a1c    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a20    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a24    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a28    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a2c    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a30    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a34    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a38    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a3c    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a40    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a44    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a48    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a4c    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a50    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a54    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a58    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a5c    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a60    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a64    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a68    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a6c    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a70    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a74    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a78    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a7c    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a80    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a84    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a88    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a8c    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a90    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a94    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a98    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000a9c    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000aa0    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000aa4    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000aa8    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000aac    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000ab0    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000ab4    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000ab8    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000abc    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000ac0    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000ac4    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000ac8    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000acc    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000ad0    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000ad4    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000ad8    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000adc    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000ae0    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000ae4    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000ae8    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000aec    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000af0    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000af4    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000af8    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000afc    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000b00    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000b04    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000b08    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000b0c    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000b10    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000b14    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000b18    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000b1c    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000b20    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000b24    0x4  startup_stm32f4xx.o [1]
+  .text              ro code  0x08000b28    0x4  startup_stm32f4xx.o [1]
+  .rodata            const    0x08000b2c    0x0  copy_init3.o [4]
+  Initializer bytes  const    0x08000b2c   0x34  <for P2 s0>
+                            - 0x08000b60  0x9d8
+
+"P2":                                     0x438
+  P2 s0                       0x20000000   0x34  <Init block>
+    .bss             inited   0x20000000   0x20  main.o [1]
+    .data            inited   0x20000020   0x10  stm32f4xx_rcc.o [1]
+    .bss             inited   0x20000030    0x1  main.o [1]
+  CSTACK                      0x20000038  0x400  <Block>
+    CSTACK           uninit   0x20000038  0x400  <Block tail>
+                            - 0x20000438  0x438
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x34 (106% of destination):
+          0x08000b2c  0x34
+    1 destination range, total size 0x31:
+          0x20000000  0x31
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module               ro code  ro data  rw data
+    ------               -------  -------  -------
+F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj: [1]
+    main.o                   852       33       33
+    misc.o                   104
+    startup_stm32f4xx.o      772
+    stm32f4xx_gpio.o         178
+    stm32f4xx_it.o            18
+    stm32f4xx_rcc.o          204       16       16
+    stm32f4xx_usart.o        318
+    system_stm32f4xx.o       224
+    ----------------------------------------------
+    Total:                 2 670       49       49
+
+command line: [2]
+    ----------------------------------------------
+    Total:
+
+dl7M_tlf.a: [3]
+    exit.o                     4
+    low_level_init.o           4
+    ----------------------------------------------
+    Total:                     8
+
+rt7M_tl.a: [4]
+    cexit.o                   10
+    cmain.o                   26
+    copy_init3.o              44
+    cstartup_M.o              12
+    data_init.o               40
+    ----------------------------------------------
+    Total:                   132
+
+shb_l.a: [5]
+    exit.o                    20
+    ----------------------------------------------
+    Total:                    20
+
+    Gaps                      10
+    Linker created                     23    1 024
+--------------------------------------------------
+    Grand Total:           2 840       72    1 073
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address  Size  Type      Object
+-----                      -------  ----  ----      ------
+.iar.init_table$$Base   0x08000938         --   Gb  - Linker created -
+.iar.init_table$$Limit  0x0800094c         --   Gb  - Linker created -
+?main                   0x0800094d        Code  Gb  cmain.o [4]
+APBAHBPrescTable        0x20000020  0x10  Data  Lc  stm32f4xx_rcc.o [1]
+BusFault_Handler        0x08000997   0x2  Code  Gb  stm32f4xx_it.o [1]
+CSTACK$$Base            0x20000038         --   Gb  - Linker created -
+CSTACK$$Limit           0x20000438         --   Gb  - Linker created -
+DebugMon_Handler        0x0800099d   0x2  Code  Gb  stm32f4xx_it.o [1]
+GPIO_Init               0x080005a9  0x70  Code  Gb  stm32f4xx_gpio.o [1]
+GPIO_PinAFConfig        0x08000637  0x24  Code  Gb  stm32f4xx_gpio.o [1]
+GPIO_ReadInputDataBit   0x08000619   0xe  Code  Gb  stm32f4xx_gpio.o [1]
+GPIO_ResetBits          0x0800062b   0x4  Code  Gb  stm32f4xx_gpio.o [1]
+GPIO_SetBits            0x08000627   0x4  Code  Gb  stm32f4xx_gpio.o [1]
+GPIO_ToggleBits         0x0800062f   0x8  Code  Gb  stm32f4xx_gpio.o [1]
+HardFault_Handler       0x08000993   0x2  Code  Gb  stm32f4xx_it.o [1]
+MemManage_Handler       0x08000995   0x2  Code  Gb  stm32f4xx_it.o [1]
+NMI_Handler             0x08000991   0x2  Code  Gb  stm32f4xx_it.o [1]
+NVIC_Init               0x0800079d  0x58  Code  Gb  misc.o [1]
+PendSV_Handler          0x0800099f   0x2  Code  Gb  stm32f4xx_it.o [1]
+RCC_AHB1PeriphClockCmd  0x08000557  0x12  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_APB1PeriphClockCmd  0x08000569  0x12  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_APB2PeriphClockCmd  0x0800057b  0x12  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_GetClocksFreq       0x080004dd  0x7a  Code  Gb  stm32f4xx_rcc.o [1]
+Region$$Table$$Base     0x08000938         --   Gb  - Linker created -
+Region$$Table$$Limit    0x0800094c         --   Gb  - Linker created -
+SVC_Handler             0x0800099b   0x2  Code  Gb  stm32f4xx_it.o [1]
+SysTick_Handler         0x080009a1   0x2  Code  Gb  stm32f4xx_it.o [1]
+SystemInit              0x08000805  0xc4  Code  Gb  system_stm32f4xx.o [1]
+USART1_IRQHandler       0x080003fd  0x2e  Code  Gb  main.o [1]
+USART3_IRQHandler       0x0800042b  0x2e  Code  Gb  main.o [1]
+USART_Cmd               0x08000701  0x14  Code  Gb  stm32f4xx_usart.o [1]
+USART_GetITStatus       0x0800075f  0x3c  Code  Gb  stm32f4xx_usart.o [1]
+USART_ITConfig          0x0800072f  0x30  Code  Gb  stm32f4xx_usart.o [1]
+USART_Init              0x0800065d  0x9a  Code  Gb  stm32f4xx_usart.o [1]
+USART_OverSampling8Cmd  0x08000715  0x12  Code  Gb  stm32f4xx_usart.o [1]
+USART_SendData          0x08000727   0x8  Code  Gb  stm32f4xx_usart.o [1]
+USART_puts              0x08000343  0x22  Code  Gb  main.o [1]
+UsageFault_Handler      0x08000999   0x2  Code  Gb  stm32f4xx_it.o [1]
+__cmain                 0x0800094d        Code  Gb  cmain.o [4]
+__exit                  0x0800097d  0x14  Code  Gb  exit.o [5]
+__iar_copy_init3        0x080008e5  0x2c  Code  Gb  copy_init3.o [4]
+__iar_data_init3        0x08000911  0x28  Code  Gb  data_init.o [4]
+__iar_program_start     0x080009b5        Code  Gb  cstartup_M.o [4]
+__low_level_init        0x08000967   0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000        Data  Gb  startup_stm32f4xx.o [1]
+_call_main              0x08000959        Code  Gb  cmain.o [4]
+_exit                   0x08000971        Code  Gb  cexit.o [4]
+_main                   0x08000963        Code  Gb  cmain.o [4]
+exit                    0x0800096b   0x4  Code  Gb  exit.o [3]
+init_USART1             0x080001e9  0x84  Code  Gb  main.o [1]
+init_USART3             0x0800026d  0x88  Code  Gb  main.o [1]
+init_usersw_led         0x08000189  0x60  Code  Gb  main.o [1]
+lastButtonStatus        0x20000030   0x1  Data  Lc  main.o [1]
+main                    0x08000365  0x98  Code  Gb  main.o [1]
+received_string         0x20000004  0x1c  Data  Gb  main.o [1]
+
+
+[1] = F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj
+[2] = command line
+[3] = dl7M_tlf.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  2 840 bytes of readonly  code memory
+     72 bytes of readonly  data memory
+  1 073 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
