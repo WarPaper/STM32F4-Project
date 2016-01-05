@@ -1,16 +1,16 @@
-"F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c"
+"F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c"
 -std=c99
 -ferror-limit=100
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\..
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\..
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\..\..\..\..\Libraries\CMSIS\Include
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\..\..\..\..\Libraries\CMSIS\Include
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\..\..\..\..\Libraries\CMSIS\ST\STM32F4xx\Include
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\..\..\..\..\Libraries\CMSIS\ST\STM32F4xx\Include
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\..\..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\..\..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\..\..\..\..\Utilities\STM32F4-Discovery
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\..\..\..\..\Utilities\STM32F4-Discovery
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\CMSIS\Include
 -I
@@ -18,15 +18,15 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\inc\c
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\Include
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\Include
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\ST\STM32F4xx\Include
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Libraries\CMSIS\ST\STM32F4xx\Include
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\inc
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Utilities\STM32F4-Discovery
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Utilities\STM32F4-Discovery
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\CMSIS\Include
 -DUSE_STDPERIPH_DRIVER=1

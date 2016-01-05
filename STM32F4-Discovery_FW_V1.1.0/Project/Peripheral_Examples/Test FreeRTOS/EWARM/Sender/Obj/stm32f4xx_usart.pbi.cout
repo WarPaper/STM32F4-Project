@@ -1,20 +1,10 @@
-"F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c"
+"F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test FreeRTOS\lib\st\c\stm32f4xx_usart.c"
 -std=c99
 -ferror-limit=100
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis_boot
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test FreeRTOS\lib\st\h
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis_lib\include
--I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\cdc
--I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\core
--I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\otg
--I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_conf
--I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test FreeRTOS\lib\freertos\h
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\CMSIS\Include
 -I
@@ -22,23 +12,14 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\inc\c
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis_boot
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test FreeRTOS\lib\st\h
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis_lib\include
--I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\cdc
--I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\core
--I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\otg
--I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_conf
--I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test FreeRTOS\lib\freertos\h
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\CMSIS\Include
 -DUSE_STDPERIPH_DRIVER=1
 -DSTM32F4XX=1
+-DARM_MATH_CM4=1
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -175,7 +156,7 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\CMSIS\Include
 -D__UINTPTR_T_MAX__=0xffffffffUL
 -D__INTPTR_SIZE_PREFIX__="l"
 -D__JMP_BUF_ELEMENT_TYPE__=unsigned long long int
--D__JMP_BUF_NUM_ELEMENTS__=8
+-D__JMP_BUF_NUM_ELEMENTS__=16
 -D__TID__=0xcf60
 -D__VER__=7040007
 -D__BUILD_NUMBER__=9843
@@ -216,7 +197,7 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\CMSIS\Include
 -D__DEF_HEAP_MEM__=__data
 -D__PRAGMA_PACK_ON__=1
 -D__MULTIPLE_INHERITANCE__=1
--D__AAPCS__=1
+-D__AAPCS_VFP__=1
 -D__ARM4TM__=4
 -D__ARM5TM__=5
 -D__ARM5T__=5
@@ -228,6 +209,16 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\CMSIS\Include
 -D__ARM6__=6
 -D__ARM7EM__=13
 -D__ARM7__=7
+-D__ARMVFPV1__=1
+-D__ARMVFPV2__=2
+-D__ARMVFPV3_D16__=1
+-D__ARMVFPV3_FP16__=1
+-D__ARMVFPV3__=3
+-D__ARMVFPV4__=4
+-D__ARMVFP_D16__=1
+-D__ARMVFP_FP16__=1
+-D__ARMVFP_SP__=1
+-D__ARMVFP__=__ARMVFPV4__
 -D__ARM_MEDIA__=1
 -D__ARM_PROFILE_M__=1
 -D__CORE__=__ARM7EM__

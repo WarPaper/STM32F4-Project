@@ -3,7 +3,6 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-
 // Task priorities: Higher numbers are higher priority.
 #define mainTIME_TASK_PRIORITY ( tskIDLE_PRIORITY + 4 )
 #define mainTIME2_TASK_PRIORITY ( tskIDLE_PRIORITY + 3 )
@@ -65,11 +64,11 @@ int main(void){
     GPIOInit(); // 初始化 GPIO
 
     // 創建任務一，執行 myTask1 () 涵式。 
-    xTaskCreate( myTask1, (signed char *) "TIME", configMINIMAL_STACK_SIZE, 
+    xTaskCreate( myTask1, (signed char *) ("TIME"), configMINIMAL_STACK_SIZE, 
     NULL, mainTIME_TASK_PRIORITY, &hTimeTask );
 
      // 創建任務二，執行 myTask2 () 涵式。
-    xTaskCreate( myTask2, (signed char *) "TIME", configMINIMAL_STACK_SIZE, 
+    xTaskCreate( myTask2, (signed char *) ("TIME"), configMINIMAL_STACK_SIZE, 
     NULL, mainTIME_TASK_PRIORITY, &hTimeTask );
 
     vTaskStartScheduler(); // 開始任務調度
