@@ -1,20 +1,20 @@
-"F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis_lib\source\stm32f4xx_exti.c"
+"F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\cmsis_lib\source\stm32f4xx_exti.c"
 -std=c99
 -ferror-limit=100
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis_boot
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\cmsis
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis_lib\include
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\cmsis_boot
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\cdc
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\cmsis_lib\include
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\core
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\usb_conf
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\otg
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\usb_lib\cdc
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_conf
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\usb_lib\core
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\usb_lib\otg
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\CMSIS\Include
 -I
@@ -22,19 +22,19 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\inc\c
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis_boot
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\cmsis
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis_lib\include
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\cmsis_boot
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\cdc
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\cmsis_lib\include
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\core
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\usb_conf
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\otg
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\usb_lib\cdc
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_conf
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\usb_lib\core
 -I
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\usb_lib\otg
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\arm\CMSIS\Include
 -DUSE_STDPERIPH_DRIVER=1

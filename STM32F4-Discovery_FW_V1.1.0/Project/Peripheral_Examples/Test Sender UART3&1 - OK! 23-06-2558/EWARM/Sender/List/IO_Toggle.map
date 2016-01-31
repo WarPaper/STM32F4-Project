@@ -1,53 +1,51 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.40.7.9843/W32 for ARM                 09/Nov/2015  16:35:38
+# IAR ELF Linker V7.40.7.9843/W32 for ARM                 05/Jan/2016  15:34:47
 # Copyright 2007-2015 IAR Systems AB.
 #
 #    Output file  =  
-#        F:\Google Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        F:\Google
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Exe\IO_Toggle.out
 #    Map file     =  
-#        F:\Google Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        F:\Google
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\List\IO_Toggle.map
 #    Command line =  
-#        "F:\Google Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        "F:\Google
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\main.o" "F:\Google
-#        Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\misc.o" "F:\Google
-#        Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\startup_stm32f4xx.o"
-#        "F:\Google Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        "F:\Google
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\stm32f4_discovery.o"
-#        "F:\Google Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        "F:\Google
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\stm32f4xx_gpio.o"
-#        "F:\Google Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        "F:\Google
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\stm32f4xx_it.o"
-#        "F:\Google Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        "F:\Google
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\stm32f4xx_rcc.o"
-#        "F:\Google Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        "F:\Google
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\stm32f4xx_usart.o"
-#        "F:\Google Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        "F:\Google
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj\system_stm32f4xx.o"
 #        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfSmall -o
-#        "F:\Google Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        "F:\Google
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Exe\IO_Toggle.out" --map
-#        "F:\Google Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        "F:\Google
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\List\IO_Toggle.map"
-#        --config "F:\Google Drive\THESIS !!!!\Thesis LOG
-#        16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
+#        --config "F:\Google
+#        Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test
 #        Sender UART3&1 - OK! 23-06-2558\EWARM\stm32f4xx_flash.icf"
 #        --semihosting --entry __iar_program_start --vfe
 #
@@ -218,7 +216,7 @@ Copy (__iar_copy_init3)
 
     Module               ro code  ro data  rw data
     ------               -------  -------  -------
-F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj: [1]
+F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj: [1]
     main.o                   852       33       33
     misc.o                   104
     startup_stm32f4xx.o      772
@@ -323,7 +321,7 @@ main                    0x08000365  0x98  Code  Gb  main.o [1]
 received_string         0x20000004  0x1c  Data  Gb  main.o [1]
 
 
-[1] = F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj
+[1] = F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART3&1 - OK! 23-06-2558\EWARM\Sender\Obj
 [2] = command line
 [3] = dl7M_tlf.a
 [4] = rt7M_tl.a
