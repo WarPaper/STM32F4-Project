@@ -1057,7 +1057,7 @@
       <name>$PROJ_DIR$\..\cmsis_lib\source\misc.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\cmsis_boot\startup\startup_stm32f4xx.c</name>
+      <name>$PROJ_DIR$\..\startup_stm32f4xx.s</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\cmsis_lib\source\stm32f4xx_exti.c</name>

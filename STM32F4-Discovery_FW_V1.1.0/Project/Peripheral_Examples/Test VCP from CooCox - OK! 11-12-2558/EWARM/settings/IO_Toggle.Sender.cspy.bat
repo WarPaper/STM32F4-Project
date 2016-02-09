@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\common\bin\cspybat" -f "F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\EWARM\settings\IO_Toggle.Sender.general.xcl" --backend -f "F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\EWARM\settings\IO_Toggle.Sender.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\common\bin\cspybat" -f "F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\EWARM\settings\IO_Toggle.Sender.general.xcl" --backend -f "F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\EWARM\settings\IO_Toggle.Sender.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\common\bin\cspybat" -f "F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\EWARM\settings\IO_Toggle.Sender.general.xcl" "--debug_file=%~1" --backend -f "F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\EWARM\settings\IO_Toggle.Sender.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.40.7\common\bin\cspybat" -f "F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\EWARM\settings\IO_Toggle.Sender.general.xcl" "--debug_file=%~1" --backend -f "F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\EWARM\settings\IO_Toggle.Sender.driver.xcl" 
 
 @echo off 
 :end

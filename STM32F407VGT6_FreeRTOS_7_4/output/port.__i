@@ -1,1 +1,0 @@
--c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I.\lib\st\h -I.\lib\freertos\h -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F4xx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -o ".\output\port.o" --omf_browse ".\output\port.crf" --depend ".\output\port.d" "lib\freertos\c\port.c"

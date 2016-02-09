@@ -1,5 +1,5 @@
 [DebugChecksum]
-Checksum=-196155190
+Checksum=1416852730
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -38,7 +38,7 @@ ITMlogFile=$PROJ_DIR$\ITM.log
 Path=D:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test Sender UART\EWARM\IO_Toggle\Exe\IO_Toggle.out
 [StLinkDriver]
 CStepIntDis=_ 0
-stlinkserialNo=2798FD0D
+stlinkserialNo=EE5626A6
 stlinkfoundProbes=
 [CodeCoverage]
 Enabled=_ 0

@@ -315,13 +315,13 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state>F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis_boot</state>
-          <state>F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis_lib\include</state>
-          <state>F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\cdc</state>
-          <state>F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\core</state>
-          <state>F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_lib\otg</state>
-          <state>F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\usb_conf</state>
-          <state>F:\Google Drive\THESIS !!!!\Thesis LOG 16_06_58\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox\cmsis</state>
+          <state>F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\cmsis</state>
+          <state>F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\cmsis_boot</state>
+          <state>F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\cmsis_lib\include</state>
+          <state>F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\usb_conf</state>
+          <state>F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\usb_lib\cdc</state>
+          <state>F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\usb_lib\core</state>
+          <state>F:\Google Drive\GitHub\STM32F4-Project\STM32F4-Discovery_FW_V1.1.0\Project\Peripheral_Examples\Test VCP from CooCox - OK! 11-12-2558\usb_lib\otg</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -973,7 +973,7 @@
       <name>$PROJ_DIR$\..\cmsis_lib\source\misc.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\cmsis_boot\startup\startup_stm32f4xx.c</name>
+      <name>$PROJ_DIR$\..\startup_stm32f4xx.s</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\cmsis_lib\source\stm32f4xx_exti.c</name>
